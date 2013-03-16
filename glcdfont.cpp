@@ -99,8 +99,10 @@ void GLCDFont::setCharacter(QChar c)
     data = i.bits();
 
     ba.clear();
-    scanLines.fill(0x00, i.numBytes());
-    ba.fill(0x00, i.numBytes());
+    //scanLines.fill(0x00, i.numBytes());
+    scanLines.fill(0x00, i.byteCount());
+    //ba.fill(0x00, i.numBytes());
+    ba.fill(0x00, i.byteCount());
 
 //    qDebug() << "bytes per line: " << i.bytesPerLine();
 //    qDebug() << "num bytes: " << i.numBytes();

@@ -14,6 +14,7 @@
  */
 
 #include <QtGui>
+#include <QtWidgets/QMessageBox>
 #include "glcdpreview.h"
 
 GLCDPreview::GLCDPreview(QWidget* parent) : QWidget(parent)
