@@ -26,9 +26,10 @@ public:
     CodeCreator();
 
     enum type {
-        glcd_avr = 0x00,
-        XGLCD = 0x01,
-        glcd = 0x02
+        glcd = 0x00,
+        glcd_avr = 0x01
+        // XGLCD = 0x01,
+
     };
     Q_DECLARE_FLAGS(OutputType, type)
 
