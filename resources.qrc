@@ -20,5 +20,6 @@
         <file>resources/glcd_tools_schriftzug.png</file>
         <file alias="CCglcd.png">resources/cc_output_glcd.png</file>
         <file>resources/neues_logo.png</file>
+        <file alias="CCglcd_avr.png">resources/cc_output_glcd_avr.png</file>
     </qresource>
 </RCC>

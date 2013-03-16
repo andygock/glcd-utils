@@ -26,7 +26,7 @@ public:
     CodeCreator();
 
     enum type {
-        Microchip = 0x00,
+        glcd_avr = 0x00,
         XGLCD = 0x01,
         glcd = 0x02
     };

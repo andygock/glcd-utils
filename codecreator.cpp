@@ -22,9 +22,9 @@ CodeCreator::CodeCreator()
 
     //slTypes << "Microchip" << "XGLCD";
     //slTypes << "Microchip" << "XGLCD" << "glcd";
-    slTypes << "glcd";
+    slTypes << "glcd" << "glcd_avr";
 
-    outputType = CodeCreator::Microchip;
+    outputType = CodeCreator::glcd;
 }
 
 void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
@@ -41,7 +41,7 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
             str_code.append(s);
         break;
 
-        case CodeCreator::Microchip:
+        case CodeCreator::glcd_avr:
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
 
