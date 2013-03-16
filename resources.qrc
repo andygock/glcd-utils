@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/Icons" >
+        <file>resources/gtk-go-back-ltr.png</file>
+        <file>resources/gtk-go-back-rtl.png</file>
+        <file>resources/gtk-go-down.png</file>
+        <file>resources/gtk-go-up.png</file>
+        <file>resources/redo.png</file>
+        <file>resources/reload.png</file>
+        <file>resources/undo.png</file>
+        <file>resources/logo.png</file>
+        <file>resources/document-open.png</file>
+        <file>resources/object-rotate-right.png</file>
+        <file>resources/format-text-bold.png</file>
+        <file>resources/object-flip-horizontal.png</file>
+        <file>resources/object-flip-vertical.png</file>
+        <file>resources/object-rotate-left.png</file>
+        <file>resources/preferences-desktop-remote-desktop.png</file>
+        <file>resources/gnome-session-shutdown.png</file>
+        <file>resources/gtk-info.png</file>
+        <file>resources/glcd_tools_schriftzug.png</file>
+        <file alias="CCMicrochip.png" >resources/cc_output_microchip.png</file>
+        <file>resources/neues_logo.png</file>
+    </qresource>
+</RCC>

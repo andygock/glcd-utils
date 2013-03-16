@@ -1,0 +1,15 @@
+Feel free to send bugs, or feature requests to devilsfist@users.sourceforge.net
+
+
+2009-05-16  Version 0.2
+ * Added auto arrange function for font creation (still some bugs, but useable)
+ * some speed improvements at code generation
+ * prepared CodeCreator class to support different output types
+ *
+ * Changed logo
+ *
+ * Some code improvements
+ * Created todo list
+
+2009-05-10  Version 0.1b
+ * Initial release

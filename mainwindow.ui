@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GLCD Tools</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/Icons/resources/neues_logo.png</normaloff>:/Icons/resources/neues_logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuModes">
+    <property name="title">
+     <string>Modes</string>
+    </property>
+    <addaction name="actionBitmap_Conversion"/>
+    <addaction name="actionFont_Creation"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionCode_Output_Type_Selection"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuModes"/>
+   <addaction name="menuView"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBitmap_Conversion"/>
+   <addaction name="actionFont_Creation"/>
+   <addaction name="actionInfo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Code Ouptut Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cbCodeOuputType"/>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="imgCodeOutputType">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>165</width>
+         <height>242</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="ccOutputSample">
+       <property name="font">
+        <font>
+         <family>Terminal</family>
+         <pointsize>6</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ouptut:
+x
+y</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionBitmap_Conversion">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Icons/resources/preferences-desktop-remote-desktop.png</normaloff>:/Icons/resources/preferences-desktop-remote-desktop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bitmap Conversion</string>
+   </property>
+  </action>
+  <action name="actionFont_Creation">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Icons/resources/format-text-bold.png</normaloff>:/Icons/resources/format-text-bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font Creation</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Icons/resources/gnome-session-shutdown.png</normaloff>:/Icons/resources/gnome-session-shutdown.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Icons/resources/gtk-info.png</normaloff>:/Icons/resources/gtk-info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionCode_Output_Type_Selection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Code Output Type Selection</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionBitmap_Conversion</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showBitmapConversion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFont_Creation</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showFontCreation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dockWidget</sender>
+   <signal>visibilityChanged(bool)</signal>
+   <receiver>actionCode_Output_Type_Selection</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>506</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCode_Output_Type_Selection</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dockWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>506</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbCodeOuputType</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>outputTypeChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>537</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showBitmapConversion()</slot>
+  <slot>showFontCreation()</slot>
+  <slot>outputTypeChanged(QString)</slot>
+ </slots>
+</ui>
