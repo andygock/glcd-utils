@@ -1,7 +1,7 @@
 # -------------------------------------------------
 # Project created by QtCreator 2009-05-05T21:17:08
 # -------------------------------------------------
-TARGET = GLCDTools
+TARGET = GLCD_Utils
 TEMPLATE = app
 QT += widgets
 SOURCES += main.cpp \
