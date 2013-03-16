@@ -3,6 +3,7 @@
 # -------------------------------------------------
 TARGET = GLCDTools
 TEMPLATE = app
+QT += widgets
 SOURCES += main.cpp \
     mainwindow.cpp \
     glcdpreview.cpp \
@@ -35,3 +36,4 @@ FORMS += mainwindow.ui \
     uiinfo.ui
 RESOURCES += resources.qrc
 RC_FILE = glcdtools.rc
+
