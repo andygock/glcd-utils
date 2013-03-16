@@ -143,10 +143,12 @@ void UIFontCreation::showCode(void)
 //    cc = parent->cc;
 
     cc->clear();
-    cc->startCode(QString("//size: %1x%2\nunsigned char font%3[] = {\n")
+    cc->startCode(QString("// Size: %1x%2\n// Chars: %4 to %5\nconst char font_%3_%1x%2_%4to%5[] = {\n")
                  .arg(m_ui->glcdWidth->value())
                  .arg(m_ui->glcdHeight->value())
-                 .arg(m_ui->fontComboBox->currentText().replace(" ", "")));
+                 .arg(m_ui->fontComboBox->currentText().replace(" ", ""))
+                 .arg(startChar)
+                 .arg(endChar));
 
     m_ui->progressBar->setMaximum(endChar-startChar);
     m_ui->progressBar->setValue(0);
@@ -154,7 +156,7 @@ void UIFontCreation::showCode(void)
     for (uchar c=startChar; c<=endChar; c++)
     {
         glcdFont->setCharacter(c);
-        cc->append(glcdFont->data(), m_ui->glcdWidth->value(), m_ui->glcdHeight->value(), QString("Char %1").arg(QString(c)));
+        cc->append(glcdFont->data(), m_ui->glcdWidth->value(), m_ui->glcdHeight->value(), QString(" Char '%1'").arg(QString(c)));
         m_ui->progressBar->setValue(c-startChar);
     }
     cc->closeCode("};");

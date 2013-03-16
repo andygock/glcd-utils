@@ -118,7 +118,7 @@ void UIBitmapConversion::showCCode(void)
     convert2GLCD();
 
     cc->clear();
-    cc->startCode(QString("//size: %1x%2\nunsigned char icon[] = {\n")
+    cc->startCode(QString("//size: %1x%2\nconst unsigned char icon[] = {\n")
              .arg(bmpSizeX)
              .arg(bmpSizeY)
              );
