@@ -26,8 +26,9 @@ public:
     CodeCreator();
 
     enum type {
-        Microchip = 0x0,
-        XGLCD = 0x01
+        Microchip = 0x00,
+        XGLCD = 0x01,
+        glcd = 0x02
     };
     Q_DECLARE_FLAGS(OutputType, type)
 

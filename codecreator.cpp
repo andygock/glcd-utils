@@ -20,7 +20,9 @@ CodeCreator::CodeCreator()
     str_code = "";
     closedCode = false;
 
-    slTypes << "Microchip" << "XGLCD";
+    //slTypes << "Microchip" << "XGLCD";
+    //slTypes << "Microchip" << "XGLCD" << "glcd";
+    slTypes << "glcd";
 
     outputType = CodeCreator::Microchip;
 }
@@ -31,6 +33,14 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
 
     switch(outputType)
     {
+        case CodeCreator::glcd:
+            for (int i=0; i<ba.size(); i++)
+                s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
+
+            s.append(QString("  //%1 \n").arg(comment));
+            str_code.append(s);
+        break;
+
         case CodeCreator::Microchip:
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));

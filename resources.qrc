@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/Icons" >
+    <qresource prefix="/Icons">
         <file>resources/gtk-go-back-ltr.png</file>
         <file>resources/gtk-go-back-rtl.png</file>
         <file>resources/gtk-go-down.png</file>
@@ -18,7 +18,7 @@
         <file>resources/gnome-session-shutdown.png</file>
         <file>resources/gtk-info.png</file>
         <file>resources/glcd_tools_schriftzug.png</file>
-        <file alias="CCMicrochip.png" >resources/cc_output_microchip.png</file>
+        <file alias="CCglcd.png">resources/cc_output_glcd.png</file>
         <file>resources/neues_logo.png</file>
     </qresource>
 </RCC>
