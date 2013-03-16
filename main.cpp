@@ -26,21 +26,22 @@
 #include "codecreator.h"
 #include "defines.h"
 #include <QtWidgets/QApplication>
-#include <QPlastiqueStyle>
+//#include <QFusionStyle>
 
 CodeCreator* cc;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QStyle* style;
+    a.setStyle("fusion");
+    //QStyle* style;
 
     cc = new CodeCreator();
-    style = new QPlastiqueStyle();
-    a.setStyle(style);
+    //style = new QFusionStyle();
+    //a.setStyle(style);
 
 //    style->polish(&a);
-    a.setPalette(style->standardPalette());
+    //a.setPalette(style->standardPalette());
 
     MainWindow w;
     w.show();
