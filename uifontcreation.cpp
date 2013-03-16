@@ -7,8 +7,6 @@
  * Author: Florian Born
  *
  * File uifontcreation.cpp
- * Version: 0.2
- * last modified: 2009-05-15
  *
  * License: GPL
  */

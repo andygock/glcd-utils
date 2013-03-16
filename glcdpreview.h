@@ -7,8 +7,6 @@
  * Author: Florian Born
  *
  * File glcdpreview.h
- * Version: 0.2
- * last modified: 2009-05-15
  *
  * License: GPL
  */
