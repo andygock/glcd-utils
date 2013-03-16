@@ -16,16 +16,16 @@
 #ifndef GLCDFONT_H
 #define GLCDFONT_H
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #include <QByteArray>
 #include <QSize>
 #include <QChar>
 #include <QImage>
 #include <QPainter>
 #include <QFont>
-#include <QErrorMessage>
-#include <QMessageBox>
-#include <QGridLayout>
+#include <QtWidgets/QErrorMessage>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QGridLayout>
 #include <QColor>
 
 #include "glcdpreview.h"

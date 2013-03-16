@@ -20,11 +20,13 @@
  *  - QImage größe dem benötigten boundingRect des Chars anpassen
  */
 
-#include <QtGui/QApplication>
-#include <QPlastiqueStyle>
+
+
 #include "mainwindow.h"
 #include "codecreator.h"
 #include "defines.h"
+#include <QtWidgets/QApplication>
+#include <QPlastiqueStyle>
 
 CodeCreator* cc;
 

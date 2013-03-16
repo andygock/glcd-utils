@@ -16,8 +16,8 @@
 #ifndef UIFONTCREATION_H
 #define UIFONTCREATION_H
 
-#include <QtGui/QWidget>
-#include <QListWidgetItem>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QListWidgetItem>
 #include <QtDebug>
 #include "glcdfont.h"
 #include "codecreator.h"

@@ -16,9 +16,9 @@
 #ifndef UIBITMAPCONVERSION_H
 #define UIBITMAPCONVERSION_H
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 #include <QFile>
-#include <QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include "EasyBMP/EasyBMP.h"
 #include "codecreator.h"
 #include "uicodedisplay.h"

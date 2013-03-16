@@ -16,7 +16,7 @@
 #ifndef UIINFO_H
 #define UIINFO_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 namespace Ui {
     class UIInfo;

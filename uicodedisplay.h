@@ -16,7 +16,7 @@
 #ifndef UICODEDISPLAY_H
 #define UICODEDISPLAY_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 namespace Ui {
     class UICodeDisplay;

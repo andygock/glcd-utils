@@ -16,7 +16,7 @@
 #ifndef GLCDPREVIEW_H
 #define GLCDPREVIEW_H
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #include <QColor>
 
 class GLCDPreview : public QWidget
