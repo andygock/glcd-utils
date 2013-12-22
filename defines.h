@@ -3,7 +3,7 @@
 
 #define MAJOR_PROGRAM_VERSION 0
 #define MINOR_PROGRAM_VERSION 3
-#define ADDITIONAL_PROGRAM_VERSION " DEV TEST"
+#define ADDITIONAL_PROGRAM_VERSION " Test"
 
 struct strctTransform
 {
@@ -11,7 +11,5 @@ struct strctTransform
     int offsetY;
     int rotation;
 };
-
-
 
 #endif // DEFINES_H

@@ -12,15 +12,7 @@
  *
  * License: GPL
  *
- * Todo:
- *  - Offsets für Buchstaben separat speichern
- *  - Automatische Anpassung der Breite/Höhe
- *  - Verschieben der Toolbar klappt nicht immer an alle seiten
- *  - Performance probleme schriftartentool bei großem GLCD
- *  - QImage größe dem benötigten boundingRect des Chars anpassen
  */
-
-
 
 #include "mainwindow.h"
 #include "codecreator.h"
@@ -40,7 +32,7 @@ int main(int argc, char *argv[])
     //style = new QFusionStyle();
     //a.setStyle(style);
 
-//    style->polish(&a);
+	//style->polish(&a);
     //a.setPalette(style->standardPalette());
 
     MainWindow w;

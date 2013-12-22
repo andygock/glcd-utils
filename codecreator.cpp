@@ -20,9 +20,12 @@ CodeCreator::CodeCreator()
     str_code = "";
     closedCode = false;
 
+    // these are older alternatives, but we don't use them
     //slTypes << "Microchip" << "XGLCD";
     //slTypes << "Microchip" << "XGLCD" << "glcd";
-    slTypes << "glcd" << "glcd_avr";
+    //slTypes << "glcd" << "glcd_avr";
+
+    slTypes << "glcd";
 
     outputType = CodeCreator::glcd;
 }
@@ -34,6 +37,7 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
     switch(outputType)
     {
         case CodeCreator::glcd:
+            s.append(QString("\t"));
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
 
@@ -42,6 +46,7 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
         break;
 
         case CodeCreator::glcd_avr:
+            // not used
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
 

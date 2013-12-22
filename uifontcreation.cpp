@@ -143,10 +143,11 @@ void UIFontCreation::showCode(void)
 //    cc = parent->cc;
 
     cc->clear();
-    cc->startCode(QString("// Size: %1x%2\n// Chars: %4 to %5\nconst char font_%3_%1x%2_%4to%5[] = {\n")
+
+    cc->startCode(QString("#ifndef FONT_%3_%1x%2_%4_TO_%5_H\n#define FONT_%3_%1x%2_%4_TO_%5_H\n\n// Size: %1x%2\n// Chars: %4 to %5\nconst char FONT_%3_%1x%2_%4_TO_%5[] PROGMEM = {\n\n")
                  .arg(m_ui->glcdWidth->value())
                  .arg(m_ui->glcdHeight->value())
-                 .arg(m_ui->fontComboBox->currentText().replace(" ", ""))
+                 .arg(m_ui->fontComboBox->currentText().replace(" ", "").toUpper())
                  .arg(startChar)
                  .arg(endChar));
 
@@ -156,10 +157,10 @@ void UIFontCreation::showCode(void)
     for (uchar c=startChar; c<=endChar; c++)
     {
         glcdFont->setCharacter(c);
-        cc->append(glcdFont->data(), m_ui->glcdWidth->value(), m_ui->glcdHeight->value(), QString(" Char '%1'").arg(QString(c)));
+        cc->append(glcdFont->data(), m_ui->glcdWidth->value(), m_ui->glcdHeight->value(), QString(" Char '%1'\n").arg(QString(c)));
         m_ui->progressBar->setValue(c-startChar);
     }
-    cc->closeCode("};");
+    cc->closeCode("};\n\n#endif\n");
     cd = new UICodeDisplay(this);
     cd->setText(cc->code());
     cd->show();
