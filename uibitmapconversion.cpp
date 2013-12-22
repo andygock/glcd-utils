@@ -64,8 +64,8 @@ void UIBitmapConversion::pickInputFile(void)
                 m_ui->imagePreview->setPixmap(QPixmap::fromImage(image));
 //                btnStart->setEnabled(true);
 
-                bmpColWidth = (int)floor(img->width() / 8);
-                bmpPageHeight = (int)ceil(img->height()  / 8);
+                bmpColWidth = (int)floor((float)(img->width() / 8));
+                bmpPageHeight = (int)ceil((float)(img->height()  / 8));
                 bmpSizeX = img->width();
                 bmpSizeY = img->height();
         }
@@ -118,7 +118,7 @@ void UIBitmapConversion::showCCode(void)
     convert2GLCD();
 
     cc->clear();
-    cc->startCode(QString("//size: %1x%2\nconst unsigned char icon[] = {\n")
+    cc->startCode(QString("// size: %1x%2\nconst unsigned char icon[] PROGMEM = {\n")
              .arg(bmpSizeX)
              .arg(bmpSizeY)
              );

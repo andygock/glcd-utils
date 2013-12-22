@@ -41,7 +41,7 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
 
-            s.append(QString("  //%1 \n").arg(comment));
+            s.append(QString("  // %1 \n").arg(comment));
             str_code.append(s);
         break;
 
@@ -50,12 +50,12 @@ void CodeCreator::append(QByteArray ba, int w, int h, QString comment)
             for (int i=0; i<ba.size(); i++)
                 s.append(QString("0x%1, ").arg((uchar)ba.at(i),2,16,QChar('0')));
 
-            s.append(QString("  //%1 \n").arg(comment));
+            s.append(QString("  // %1 \n").arg(comment));
             str_code.append(s);
         break;
 
         default:
-            str_code.append("//Sorry this output type isn't supported (yet)\n");
+            str_code.append("// Sorry this output type isn't supported (yet)\n");
         break;
     }
 }

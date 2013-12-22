@@ -144,7 +144,7 @@ void UIFontCreation::showCode(void)
 
     cc->clear();
 
-    cc->startCode(QString("#ifndef FONT_%3_%1x%2_%4_TO_%5_H\n#define FONT_%3_%1x%2_%4_TO_%5_H\n\n// Size: %1x%2\n// Chars: %4 to %5\nconst char FONT_%3_%1x%2_%4_TO_%5[] PROGMEM = {\n\n")
+    cc->startCode(QString("// Save as: fonts/FONT_%3_%1x%2_%4_TO_%5.h\n\n#ifndef FONT_%3_%1x%2_%4_TO_%5_H\n#define FONT_%3_%1x%2_%4_TO_%5_H\n\n// Size: %1x%2\n// Chars: %4 to %5\nconst char FONT_%3_%1x%2_%4_TO_%5[] PROGMEM = {\n\n")
                  .arg(m_ui->glcdWidth->value())
                  .arg(m_ui->glcdHeight->value())
                  .arg(m_ui->fontComboBox->currentText().replace(" ", "").toUpper())
