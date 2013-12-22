@@ -6,5 +6,5 @@ Derived from original code by Florian Born (GPL License)
 
 Tools Used:
 
-- Qt Creator 2.6.2
-- Qt 5.0.1
+- Qt Creator 3.0.0
+- Qt 5.2
